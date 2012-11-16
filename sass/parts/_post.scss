@@ -1,27 +1,41 @@
 .post{
 	h1.title, .entry-content{
-		margin-left: 200px;
+		//margin-left: 200px;
 		@media screen and (max-width: 800px){
 			margin-left: 0;
 		}
 	}
 	.meta{
 		position: absolute;
-		top: 85px;
+		//top: 85px;
+		top:60px;
+		
 		line-height: 2;
 		font-size: 0.9em;
 		color: $color-gray02;
-		width: 170px;
-		@media screen and (max-width: 800px){
-			margin-top: 15px;
-			position: static;
+		//width: 170px;
+		@media screen and (max-width: 600px){
+			//margin-top: 15px;
+			//position: static;
+			top:45px;
 			width: auto;
 		}
+		/*
+		@media screen and (max-width: 820px){
+			//margin-top: 15px;
+			//position: static;
+			top:50px;
+			width: auto;
+		}
+		*/
 		a{
 			@include link-colors($color-gray02, $color-gray01);
 			@include transition(0.3s);
 		}
 		.date, .tags, .comments{
+			float:left;
+			margin-right:20px;
+			
 			padding-left: 30px;
 			position: relative;
 			&:before{

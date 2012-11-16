@@ -3,7 +3,10 @@
 	height: 20px;
 	line-height: 20px;
 	position: relative;
-	@include border-shadow();
+	text-shadow: $text-shadow;
+	//@include border-shadow();
+	 border-bottom:1px solid $color-split1;
+	 border-top:1px solid $color-split2;
 	a{
 		&:hover{
 			text-decoration: underline;

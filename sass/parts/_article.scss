@@ -1,8 +1,9 @@
 article{
-	border-bottom: 1px solid $color-gray04;
-	border-top: 1px solid $color-gray05;
+	border-bottom: 1px solid $color-split1;
+	border-top: 1px solid $color-split2;
 	padding: 30px 0;
 	position: relative;
+	text-shadow: $text-shadow;
 	@media screen and (max-width: 800px){
 		padding-bottom: 15px;
 	}
@@ -14,16 +15,18 @@ article{
 		line-height: 35px;
 		margin-bottom: 20px;
 		a{
-			color: $color-gray01;
+			color: $color-gray03;
 		}
 	}
 	.entry-content{
 		line-height: 2;
 		text-align: justify;
 		a{
+			/*
 			&:hover{
 				text-decoration: underline;
 			}
+			*/
 		}
 		.more-link{
 			display: block;
@@ -58,13 +61,13 @@ article{
 		}
 		h2{
 			font-weight: 300;
-			border-bottom: 1px solid $color-gray04;
+			border-bottom: 1px solid $color-split1;
 			position: relative;
 			&:before{
 				content: "";
 				position: absolute;
 				bottom: -2px;
-				border-bottom: 1px solid $color-gray05;
+				border-bottom: 1px solid $color-split2;
 				width: 100%;
 			}
 		}
@@ -73,32 +76,71 @@ article{
 			height: auto;
 		}
 		blockquote{
-			background: $color-gray04;
-			border-left: 5px solid $color-gray03;
+			background: #222;
+			border-left: #444;
 			padding: 15px 20px;
 			margin-top: 10px;
+			font-style: italic;
 			& > p:first-of-type{
 				margin-top: 0;
+				&:before{
+					content:open-quote;
+					font-size:3em;
+					line-height: 0;
+					top: 18px;
+					position: relative;
+					float: left;
+					left: -18px;
+				}
+			}
+			&>p:last-of-type{
+				&:after{
+					content:close-quote;
+					font-size:3em;
+					line-height: 0;
+					position: relative;
+					top: 15px;
+					clear: both;
+				}
 			}
 		}
 		iframe{
 			border: none;
 		}
 		table{
-			background: $color-gray04;
-			border: 1px solid $color-gray03;
+			//background: $color-gray04;
+			background:none;
+			//border: 1px solid $color-gray03;
+			border-bottom: 1px solid $color-black02;
+			border-right: 1px solid $color-black02;
 			border-spacing: 0;
 			margin-top: 10px;
 			th{
-				background: $color-gray03;
+				background: $color-black02;
 				padding: 0 15px;
+				box-shadow:$out-box-shadow;
 			}
 			td{
 				text-align: center;
 			}
 			tr{
 				&:nth-of-type(2n){
-					background: #d5d5d5;
+					background: $color-black04;
+				}
+			}
+		}
+		&>table{
+			th{
+
+			}
+			td{
+				border-left:1px solid $color-split2;
+				border-right:1px solid $color-split1;
+			}
+			tr{
+
+				&:nth-of-type(2n){
+
 				}
 			}
 		}
